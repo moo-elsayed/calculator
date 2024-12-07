@@ -1,6 +1,6 @@
 import 'package:calculator/home_view/clases/button.dart';
 import 'package:flutter/material.dart';
-import '../helper/buttons_list.dart';
+import '../helper/get_buttons_list.dart';
 import 'custom_button.dart';
 
 class ButtonsBuilder extends StatelessWidget {
@@ -8,6 +8,7 @@ class ButtonsBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Button> buttonsList = getButtonsList(context: context);
     return Expanded(
       child: GridView.builder(
         itemCount: 20,

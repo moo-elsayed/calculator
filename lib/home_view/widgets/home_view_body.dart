@@ -8,13 +8,13 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(20),
-      child: Column(
-        children: [
-          ButtonsBuilder(),
-        ],
-      ),
+    return const Column(
+      children: [
+        SizedBox(
+          height: 20,
+        ),
+        ButtonsBuilder(),
+      ],
     );
   }
 }
