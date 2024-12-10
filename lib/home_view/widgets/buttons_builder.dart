@@ -9,7 +9,8 @@ class ButtonsBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Button> buttonsList = getButtonsList(context: context);
-    return Expanded(
+    return SizedBox(
+      height: 424 - 16,
       child: GridView.builder(
         itemCount: 20,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
