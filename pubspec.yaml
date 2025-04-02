@@ -37,8 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.0.16
   flutter_bloc: ^8.1.6
-  lite_rolling_switch: ^1.0.1
   math_expressions: ^2.6.0
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:

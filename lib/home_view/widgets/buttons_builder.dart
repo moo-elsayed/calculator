@@ -12,15 +12,20 @@ class ButtonsBuilder extends StatelessWidget {
     return SizedBox(
       height: 424 - 16,
       child: GridView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: 20,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4, mainAxisSpacing: 16, crossAxisSpacing: 16),
+          crossAxisCount: 4,
+          mainAxisSpacing: 16,
+          crossAxisSpacing: 16,
+        ),
         itemBuilder: (context, index) {
           return CustomButton(
             button: Button(
-                onPressed: buttonsList[index].onPressed,
-                child: buttonsList[index].child,
-                color: buttonsList[index].color),
+              onPressed: buttonsList[index].onPressed,
+              child: buttonsList[index].child,
+              color: buttonsList[index].color,
+            ),
           );
         },
       ),

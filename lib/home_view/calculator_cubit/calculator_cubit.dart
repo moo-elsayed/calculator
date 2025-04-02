@@ -1,6 +1,6 @@
 import 'dart:developer';
-
 import 'package:calculator/home_view/calculator_cubit/calculator_states.dart';
+import 'package:calculator/home_view/helper/shared_preferences_manager.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:math_expressions/math_expressions.dart';
 
@@ -10,6 +10,17 @@ class CalculatorCubit extends Cubit<CalculatorStates> {
   String lastExpression = '';
   String expression = '';
   final List<String> _operators = ['%', '+', '×', '÷', '-'];
+  late bool isDark;
+
+  void setMode(bool mode) {
+    isDark = mode;
+  }
+
+  void changeMode() {
+    isDark = !isDark;
+    SharedPreferencesManager.setMode(isDark);
+    emit(NewState());
+  }
 
   void clear() {
     expression = '';
